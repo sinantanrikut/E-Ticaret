@@ -1,0 +1,391 @@
+:root {
+  --primary: #e01705;
+  --secondary: #0a1f44;
+  --primary-invert: #fff;
+  --secondary-invert: #fff;
+
+   /* DEFAULT COLOR OF ALERT TEXT */
+   --alert-text-primary: #fff;
+   
+  /* DEFAULT COLOR OF TEXTS */
+  --text-primary: #0a1f44;
+  
+  /* FOR BUTTONS & INPUTS */
+  --elements-roundness: 10rem;
+
+  --space-between-blocks: 5.3rem;
+  /* for mobiles */
+  --space-between-blocks-small-screens: 3rem;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--alert-text-primary);
+}
+
+.space-between-blocks {
+  padding-top: var(--space-between-blocks-small-screens);
+  padding-bottom: var(--space-between-blocks-small-screens);
+}
+
+@media(min-width: 992px) {
+  .space-between-blocks {
+    padding-top: var(--space-between-blocks);
+    padding-bottom: var(--space-between-blocks);
+  }
+}
+
+/* ----------------- BUTTON ------------------- */
+
+button {
+  color: inherit;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn {
+  font-size: .87rem;
+  padding: .8rem 1.6rem;
+  border-radius: var(--elements-roundness);
+  transition: .2s all;
+}
+
+@media(min-width: 992px) {
+  .btn {
+    padding: .8rem 2rem;
+  }
+}
+
+.btn,
+.btn:hover,
+.btn:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.05);
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus {
+  background: var(--primary);
+  color: var(--primary-invert);
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background: var(--secondary);
+  color: var(--secondary-invert);
+}
+
+.btn-sm {
+  padding: .8rem;
+}
+
+/* ============================================== */
+
+.offer-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #0a1f44;
+  color: white;
+  font-size: .9rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.offer-alert__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media(min-width: 992px) {
+  .offer-alert__container {
+    display: block;
+  }
+}
+
+.offer-alert__btn {
+  color: var(--primary-invert);
+  background-color: var(--primary);
+  padding: .5rem .8rem;
+  margin-top: .5rem;
+  border-radius: 5px;
+  transition: .2s all;
+  text-decoration: none;
+}
+
+@media(min-width: 922px) {
+  .offer-alert__btn {
+    margin: 0 .5rem;
+  }
+}
+
+.offer-alert__btn:hover,
+.offer-alert__btn:focus {
+  background-color: var(--primary);
+  color: var(--primary-invert);
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+/* ============================================== */
+
+/* ============================================== */
+
+.hero {
+  --hero-nav-height: 100px;
+  --block-background: white;
+  --block-text-color: var(--text-primary);
+  background: var(--block-background);
+  color: var(--block-text-color);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 98px;
+}
+
+@media(min-width: 992px) {
+  .hero {
+    margin-top: 53px;
+  }
+}
+
+.hero-nav {
+  margin: 0 -1rem;
+  width: 100%;
+  height: var(--hero-nav-height);
+  display: flex;
+  align-items: center;
+}
+
+.hero-nav__item {
+  text-align: center;
+  font-size: 1.1rem;
+
+}
+
+@media(min-width: 992px) {
+  .hero-nav__item {
+    margin: 0 1rem;
+  }
+}
+
+@media(min-width: 992px) {
+  .nav--lg-side {
+    flex-direction: row-reverse;
+  }
+}
+
+.hero-nav__logo {
+  height: 35px;
+}
+
+.hero-nav__link {
+  color: inherit;
+  opacity: .9;
+   text-decoration: none;
+}
+
+.hero-nav__link:hover,
+.hero-nav__link:focus {
+  color: var(--primary);
+  text-decoration: none;
+  opacity: 1;
+}
+
+.hero__row {
+  height: 100%;
+}
+
+.hero_empty-column {
+  height: 100%;
+}
+
+.hero__image-column {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero__content {
+  text-align: initial;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+@media(min-width:992px) {
+  .hero__content {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.hero__title {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.hero__paragraph {
+  font-size: .9rem;
+  font-weight: 400;
+  line-height: 1.7;
+  opacity: .9;
+}
+
+@media (min-width: 576px) {
+  .hero__title {
+    font-size: 2.5rem;
+    line-height: 1.17;
+  }
+  
+  .hero__paragraph {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: 3rem;
+  }
+}
+
+@media(min-width: 992px) {
+  .hero__title {
+    width: 95%;
+    font-size: 3rem;
+    line-height: 1.17;
+  }
+
+  .hero__paragraph {
+    font-size: 1rem;
+    width: 70%;
+  }
+}
+
+@media(min-width: 1200px) {
+  .hero__title {
+    font-size: 3.5rem;
+    line-height: 1.17;
+  }
+}
+
+.cta-p {
+  text-align: center;
+  font-size: .75rem;
+  opacity: .9;
+}
+
+@media(min-width: 992px) {
+  .cta-p {
+    text-align: initial;
+  }
+}
+
+.hero__btns-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  margin: auto;
+}
+
+.hero__btn {
+  display: inline-block;
+  width: 100%;
+}
+
+@media(min-width: 992px) {
+  .hero__btns-container {
+    width: auto;
+    flex-direction: row;
+  }
+
+  .hero__btn {
+    width: auto;
+  }
+}
+
+.highlight {
+  color: var(--primary);
+}
+
+/* ----------------------------- */
+
+.bok{
+      border: 1px solid blue;
+      float: left;
+      padding: 15px;
+      margin: 20px;
+      width: 19%;
+      height: 300px;
+      background-color: #F77C53;
+    }
+
+/* ------------ TABLO KISMI----------------- */
+
+.tab {
+  overflow: hidden;
+  border: 1px solid gray;
+  background-color: #ffff;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #F50003;
+  color: white;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #0A1F44;
+  color: white;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* Style the close button */
+.topright {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.topright:hover {color: red;}
+
